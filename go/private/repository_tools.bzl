@@ -31,7 +31,7 @@ filegroup(
 def _go_repository_tools_impl(ctx):
   # We work this out here because you can't use a toolchain from a repository rule
   if ctx.os.name == 'linux':
-    go_tool = ctx.path(Label("@go1_8_3_linux_amd64//:bin/go"))
+    go_tool = ctx.path(Label("@go1_8_3_linux_ppc64le//:bin/go"))
   elif ctx.os.name == 'mac os x':
     go_tool = ctx.path(Label("@go1_8_3_darwin_amd64//:bin/go"))
   else:
