@@ -38,7 +38,7 @@ def _go_repository_tools_impl(ctx):
   go_sdk = None
   extension = ""
   if ctx.os.name == 'linux':
-    go_sdk = ctx.attr.linux_sdk if ctx.attr.linux_sdk else "go{}_linux_amd64".format(version)
+    go_sdk = ctx.attr.linux_sdk if ctx.attr.linux_sdk else "go{}_linux_ppc64le".format(version)
   elif ctx.os.name == 'mac os x':
     go_sdk = ctx.attr.linux_sdk if ctx.attr.linux_sdk else "go{}_darwin_amd64".format(version)
   elif ctx.os.name.startswith('windows'):
